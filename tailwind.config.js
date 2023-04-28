@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "portal-background": "url('/assets/background.png')",
+      },
+    },
   },
   plugins: [],
 };
