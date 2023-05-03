@@ -12,7 +12,7 @@ export class EpisodeService {
   constructor(private httpClient: HttpClient) {}
 
   getAllEpisode(): Observable<Response<Episode>> {
-    const url = "https://rickandmortyapi.com/api/episode";
+    const url = 'https://rickandmortyapi.com/api/episode';
     return this.httpClient.get<Response<Episode>>(url);
   }
 }
