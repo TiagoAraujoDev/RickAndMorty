@@ -5,21 +5,21 @@
   LIVING, AND WHEN I DON’T LIKE SOMETHING ABOUT THE WORLD, I CHANGE IT.
 </h1>
 <div class="w-full flex justify-between">
-  <button
-    class="text-neutral-700 text-base md:text-xl font-semibold rounded px-4 py-2 hover:shadow-md hover:shadow-neutral-800 transition-all"
+  <a
+    class="text-neutral-700 text-base md:text-xl font-semibold rounded px-4 py-2 hover:shadow-md hover:shadow-neutral-800 transition-all cursor-pointer"
   >
     Characters
-  </button>
-  <button
-    class="text-neutral-700 text-base md:text-xl font-semibold rounded px-4 py-2 hover:shadow-md hover:shadow-neutral-800 transition-all"
+  </a>
+  <a
+    class="text-neutral-700 text-base md:text-xl font-semibold rounded px-4 py-2 hover:shadow-md hover:shadow-neutral-800 transition-all cursor-pointer"
   >
     Episodes
-  </button>
-  <button
-    class="text-neutral-700 text-base md:text-xl font-semibold rounded px-4 py-2 hover:shadow-md hover:shadow-neutral-800 transition-all"
+  </a>
+  <a
+    class="text-neutral-700 text-base md:text-xl font-semibold rounded px-4 py-2 hover:shadow-md hover:shadow-neutral-800 transition-all cursor-pointer"
   >
     Locations
-  </button>
+  </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
   <app-card *ngFor="let character of characters" [character]="character" />
