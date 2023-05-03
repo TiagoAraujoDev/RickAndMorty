@@ -9,6 +9,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardComponent } from './components/card/card.component';
+import { CharactersComponent } from './components/pages/characters/characters.component';
+import { EpisodesComponent } from './components/pages/episodes/episodes.component';
+import { LocationsComponent } from './components/pages/locations/locations.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { CardComponent } from './components/card/card.component';
     HeaderComponent,
     FooterComponent,
     CardComponent,
+    CharactersComponent,
+    EpisodesComponent,
+    LocationsComponent,
   ],
   imports: [
     BrowserModule,
