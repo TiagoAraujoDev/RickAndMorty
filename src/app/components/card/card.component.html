@@ -1,22 +1,35 @@
-<div class="bg-neutral-700 rounded overflow-hidden my-6 shadow-lg shadow-neutral-700">
-  <img
-    class="w-full"
-    src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-    alt="Rick Sanchez"
-  />
+<div
+  class="bg-neutral-700 rounded overflow-hidden shadow-xl shadow-neutral-800"
+>
+  <img class="w-full" src="{{ character.image }}" alt="{{ character.name }}" />
   <div class="py-2 px-4">
-    <h1 class="text-lg font-semibold">Rick Sanchez</h1>
+    <h1 class="text-lg font-semibold">{{ character.name }}</h1>
     <div class="flex items-center gap-2">
       <span
+        *ngIf="character.status === 'Alive'"
         class="inline-block w-3 h-3 rounded-full bg-green-500 border border-neutral-700"
       ></span>
-      <span>Alive</span>
+      <span
+        *ngIf="character.status === 'Dead'"
+        class="inline-block w-3 h-3 rounded-full bg-red-500 border border-neutral-700"
+      ></span>
+      <span
+        *ngIf="character.status === 'unknown'"
+        class="inline-block w-3 h-3 rounded-full bg-neutral-400 border border-neutral-700"
+      ></span>
+      <span>{{ character.status }}</span>
       <span class="inline-block w-2 h-[1px] bg-neutral-100"></span>
-      <span>Human</span>
+      <span>{{ character.gender }}</span>
     </div>
     <div class="my-2">
-      <p class="text-neutral-400 inline-block mr-1">Location:</p>
-      <a routerLink="" class="hover:text-green-500">Earth</a>
+      <p class="text-neutral-400 mr-1">Location:</p>
+      <a
+        routerLink=""
+        title="{{ character.location.name }}"
+        class="hover:text-green-500 text-ellipsis overflow-hidden"
+      >
+        {{ character.location.name }}
+      </a>
     </div>
     <div class="my-2">
       <a routerLink="" class="hover:text-green-500">First appearance</a>

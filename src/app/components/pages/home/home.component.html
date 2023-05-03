@@ -19,11 +19,6 @@
     Locations
   </button>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-  <app-card />
-  <app-card />
-  <app-card />
-  <app-card />
-  <app-card />
-  <app-card />
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+  <app-card *ngFor="let character of characters" [character]="character" />
 </div>
