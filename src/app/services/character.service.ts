@@ -15,4 +15,12 @@ export class CharacterService {
     const url = 'https://rickandmortyapi.com/api/character';
     return this.httpClient.get<Response<Character>>(url);
   }
+
+  getNextPage(url: string): Observable<Response<Character>> {
+    return this.httpClient.get<Response<Character>>(url);
+  }
+
+  getPrevPage(url: string): Observable<Response<Character>> {
+    return this.httpClient.get<Response<Character>>(url);
+  }
 }
