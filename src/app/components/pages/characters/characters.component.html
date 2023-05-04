@@ -1,1 +1,9 @@
-<p>characters works!</p>
+<h1 class="text-neutral-700 text-4xl font-bold">Characters</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+  <app-card *ngFor="let character of characters" [character]="character" />
+</div>
+<app-pagination-button
+  [infos]="infos"
+  (notifyNextPage)="handleNextPage($event)"
+  (notifyPrevPage)="handlePrevPage($event)"
+/>

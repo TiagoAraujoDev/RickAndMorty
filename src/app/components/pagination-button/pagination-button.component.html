@@ -1,0 +1,17 @@
+<div class="w-full flex justify-center gap-2">
+  <button
+    *ngIf="infos.prev"
+    (click)="handlePrevPage(infos.prev)"
+    class="px-4 py-2 bg-green-900 hover:shadow-md hover:shadow-neutral-800 rounded transition-all"
+  >
+    previous
+  </button>
+  <button
+    *ngIf="infos.next"
+    (click)="handleNextPage(infos.next)"
+    class="px-4 py-2 bg-green-900 hover:shadow-md hover:shadow-neutral-800 rounded transition-all"
+  >
+    next
+  </button>
+</div>
+

@@ -12,6 +12,7 @@ import { CardComponent } from './components/card/card.component';
 import { CharactersComponent } from './components/pages/characters/characters.component';
 import { EpisodesComponent } from './components/pages/episodes/episodes.component';
 import { LocationsComponent } from './components/pages/locations/locations.component';
+import { PaginationButtonComponent } from './components/pagination-button/pagination-button.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LocationsComponent } from './components/pages/locations/locations.compo
     CharactersComponent,
     EpisodesComponent,
     LocationsComponent,
+    PaginationButtonComponent,
   ],
   imports: [
     BrowserModule,
