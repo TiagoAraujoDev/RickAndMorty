@@ -10,7 +10,7 @@ import { CharacterService } from 'src/app/services/character.service';
 })
 export class HomeComponent implements OnInit {
   characters!: Character[];
-  infos!: Infos
+  infos!: Infos;
 
   constructor(private characterService: CharacterService) {}
 
@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     this.characterService.getNextPage(url).subscribe((response) => {
       this.characters = response.results;
       this.infos = response.info;
+      window.scrollTo(0, 0);
     });
   }
 
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit {
     this.characterService.getPrevPage(url).subscribe((response) => {
       this.characters = response.results;
       this.infos = response.info;
+      window.scrollTo(0, 0);
     });
   }
 }
