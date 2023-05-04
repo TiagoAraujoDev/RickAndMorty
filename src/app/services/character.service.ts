@@ -4,15 +4,21 @@ import { Observable } from 'rxjs';
 
 import { Response } from 'src/app/response';
 import { Character } from 'src/app/character';
+import { FilterInfos } from '../filter-infos';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharacterService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
-  getAllCharacter(): Observable<Response<Character>> {
-    const url = 'https://rickandmortyapi.com/api/character';
+  getAllCharacter(filter?: FilterInfos): Observable<Response<Character>> {
+    let url;
+    if (filter) {
+      url = `https://rickandmortyapi.com/api/character/?name=${filter.name}&status=${filter.status}&gender=${filter.gender}`;
+    } else {
+      url = 'https://rickandmortyapi.com/api/character';
+    }
     return this.httpClient.get<Response<Character>>(url);
   }
 

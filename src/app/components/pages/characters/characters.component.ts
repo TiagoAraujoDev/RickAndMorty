@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Character } from 'src/app/character';
+import { FilterInfos } from 'src/app/filter-infos';
 import { Infos } from 'src/app/infos';
 import { CharacterService } from 'src/app/services/character.service';
 
@@ -11,7 +13,7 @@ export class CharactersComponent implements OnInit {
   characters!: Character[];
   infos!: Infos;
 
-  constructor(private characterService: CharacterService) {}
+  constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
     this.characterService.getAllCharacter().subscribe((response) => {
@@ -30,6 +32,14 @@ export class CharactersComponent implements OnInit {
 
   handlePrevPage(url: string) {
     this.characterService.getPrevPage(url).subscribe((response) => {
+      this.characters = response.results;
+      this.infos = response.info;
+      window.scrollTo(0, 0);
+    });
+  }
+
+  handleSubmit(event: FilterInfos) {
+    this.characterService.getAllCharacter(event).subscribe((response) => {
       this.characters = response.results;
       this.infos = response.info;
       window.scrollTo(0, 0);

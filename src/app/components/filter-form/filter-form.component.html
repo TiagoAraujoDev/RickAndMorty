@@ -1,0 +1,87 @@
+<form (ngSubmit)="handleSubmit()" [formGroup]="filterForm">
+  <div class="flex flex-col mb-2">
+    <label class="text-neutral-800 text-lg font-semibold" for="name"
+      >Name:</label
+    >
+    <input
+      type="text"
+      formControlName="name"
+      placeholder="Filter by name..."
+      class="bg-neutral-600 max-w-xs outline-none rounded-lg p-2"
+    />
+  </div>
+  <div class="flex gap-8">
+    <div>
+      <h2 class="text-neutral-800 text-lg font-semibold">Gender</h2>
+      <div class="flex items-center">
+        <input
+          id="male"
+          type="radio"
+          formControlName="gender"
+          value="male"
+          class="form-radio h-4 w-4 text-green-600"
+        />
+        <label for="male" class="ml-2 text-gray-700">male</label>
+      </div>
+      <div class="flex items-center">
+        <input
+          id="female"
+          type="radio"
+          formControlName="gender"
+          value="female"
+          class="form-radio h-4 w-4 text-green-600"
+        />
+        <label for="female" class="ml-2 text-gray-700">female</label>
+      </div>
+      <div class="flex items-center">
+        <input
+          id="genderless"
+          type="radio"
+          formControlName="gender"
+          value="genderless"
+          class="form-radio h-4 w-4 text-green-600"
+        />
+        <label for="genderless" class="ml-2 text-gray-700">genderless</label>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-neutral-800 text-lg font-semibold">Status</h2>
+      <div class="flex items-center">
+        <input
+          id="alive"
+          type="radio"
+          formControlName="status"
+          value="alive"
+          class="form-radio h-4 w-4 text-green-600"
+        />
+        <label for="alive" class="ml-2 text-gray-700">Alive</label>
+      </div>
+      <div class="flex items-center">
+        <input
+          id="dead"
+          type="radio"
+          formControlName="status"
+          value="dead"
+          class="form-radio h-4 w-4 text-green-600"
+        />
+        <label for="dead" class="ml-2 text-gray-700">Dead</label>
+      </div>
+      <div class="flex items-center">
+        <input
+          id="unknown"
+          type="radio"
+          formControlName="status"
+          value="Unknown"
+          class="form-radio h-4 w-4 text-green-600"
+        />
+        <label for="unknown" class="ml-2 text-gray-700">Unknown</label>
+      </div>
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="px-3 py-2 bg-neutral-700 rounded-lg hover:shadow-lg hover:shadow-neutral-900 transition-all mt-2"
+  >
+    filter
+  </button>
+</form>

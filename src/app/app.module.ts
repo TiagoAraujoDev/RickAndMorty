@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { CharactersComponent } from './components/pages/characters/characters.co
 import { EpisodesComponent } from './components/pages/episodes/episodes.component';
 import { LocationsComponent } from './components/pages/locations/locations.component';
 import { PaginationButtonComponent } from './components/pagination-button/pagination-button.component';
+import { FilterFormComponent } from './components/filter-form/filter-form.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,17 @@ import { PaginationButtonComponent } from './components/pagination-button/pagina
     EpisodesComponent,
     LocationsComponent,
     PaginationButtonComponent,
+    FilterFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
