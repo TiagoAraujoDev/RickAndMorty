@@ -9,10 +9,18 @@ import { Episode } from 'src/app/episode';
   providedIn: 'root',
 })
 export class EpisodeService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   getAllEpisode(): Observable<Response<Episode>> {
     const url = 'https://rickandmortyapi.com/api/episode';
+    return this.httpClient.get<Response<Episode>>(url);
+  }
+
+  getNextPage(url: string): Observable<Response<Episode>> {
+    return this.httpClient.get<Response<Episode>>(url);
+  }
+
+  getPrevPage(url: string): Observable<Response<Episode>> {
     return this.httpClient.get<Response<Episode>>(url);
   }
 }

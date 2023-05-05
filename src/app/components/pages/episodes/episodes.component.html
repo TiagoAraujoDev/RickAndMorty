@@ -1,1 +1,9 @@
-<p>episodes works!</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+  <app-episode-card *ngFor="let episode of episodes" [episode]="episode" />
+</div>
+<app-pagination-button
+  [infos]="infos"
+  (notifyNextPage)="handleNextPage($event)"
+  (notifyPrevPage)="handlePrevPage($event)"
+/>
+
