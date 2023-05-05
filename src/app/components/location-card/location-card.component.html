@@ -1,1 +1,9 @@
-<p>location-card works!</p>
+<div
+  class="bg-neutral-500 p-4 rounded-lg hover:shadow-md hover:shadow-neutral-900 transition-all"
+>
+  <p class="text-neutral-300 font-semibold">{{ location.type }}</p>
+  <h2 class="text-neutral-900 font-bold text-lg">{{ location.name }}</h2>
+  <p class="text-base">
+    Dimension: <span class="text-neutral-200 italic">{{ location.dimension }}</span>
+  </p>
+</div>
