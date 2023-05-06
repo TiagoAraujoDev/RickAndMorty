@@ -1,4 +1,4 @@
-<div class="w-full flex justify-center gap-2">
+<div *ngIf="infos" class="w-full flex justify-center gap-2">
   <button
     *ngIf="infos.prev"
     (click)="handlePrevPage(infos.prev)"
@@ -14,4 +14,3 @@
     next
   </button>
 </div>
-
