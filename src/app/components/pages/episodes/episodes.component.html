@@ -1,5 +1,5 @@
 <h1 class="text-neutral-700 text-4xl font-bold text-center">Episodes</h1>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 mt-2">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
   <app-episode-card *ngFor="let episode of episodes" [episode]="episode" />
 </div>
 <app-pagination-button
