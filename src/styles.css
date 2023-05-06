@@ -9,3 +9,7 @@ button,
 textarea {
   font-family: "Inter", sans-serif;
 }
+
+.min-height {
+  min-height: calc(100vh - 240px);
+}

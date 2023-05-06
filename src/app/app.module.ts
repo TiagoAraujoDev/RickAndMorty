@@ -19,6 +19,7 @@ import { LocationCardComponent } from './components/location-card/location-card.
 import { EpisodeCardComponent } from './components/episode-card/episode-card.component';
 import { EpisodeDetailsComponent } from './components/pages/episode-details/episode-details.component';
 import { LocationDetailsComponent } from './components/pages/location-details/location-details.component';
+import { AboutComponent } from './components/pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { LocationDetailsComponent } from './components/pages/location-details/lo
     EpisodeCardComponent,
     EpisodeDetailsComponent,
     LocationDetailsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

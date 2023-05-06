@@ -7,9 +7,11 @@ import { CharactersComponent } from './components/pages/characters/characters.co
 import { EpisodesComponent } from './components/pages/episodes/episodes.component';
 import { EpisodeDetailsComponent } from './components/pages/episode-details/episode-details.component';
 import { LocationDetailsComponent } from './components/pages/location-details/location-details.component';
+import { AboutComponent } from './components/pages/about/about.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'episodes', component: EpisodesComponent },
   { path: 'locations', component: LocationsComponent },

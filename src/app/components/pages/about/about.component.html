@@ -1,0 +1,57 @@
+<div class="flex flex-col items-center justify-center">
+  <h1 class="text-center text-3xl text-neutral-800 font-bold mb-2">
+    Welcome to our Rick and Morty Application!
+  </h1>
+  <p class="text-center text-lg text-neutral-700 mb-4">
+    We are thrilled to offer you a platform that allows you to access all the
+    information about your favorite show, Rick and Morty, in one place. Our
+    application is built using
+    <a
+      href="https://angular.io/"
+      class="tracking-wide text-neutral-500 font-bold hover:underline"
+      >Angular</a
+    >, a powerful framework that enables us to create seamless and responsive
+    user interfaces.
+  </p>
+  <p class="text-center text-lg text-neutral-700 mb-12">
+    The application utilizes the
+    <a
+      href="https://rickandmortyapi.com/"
+      class="tracking-wide text-neutral-500 font-bold hover:underline"
+      >Rick and Morty API</a
+    >
+    , which provides a plethora of information about the show's characters,
+    episodes, and locations. You can search for your favorite characters, see
+    their information and its status, and discover new episodes and locations.
+  </p>
+
+  <h2 class="text-center text-neutral-800 text-2xl font-bold mb-6">
+    Rick and Morty API
+  </h2>
+  <div
+    *ngIf="numberOfCharacter && numberOfEpisode && numberOfLocation"
+    class="flex flex-col items-center justify-center gap-2"
+  >
+    <a
+      routerLink="/characters"
+      class="hover:shadow-lg hover:shadow-neutral-950 rounded p-4 transition-all"
+    >
+      <span class="text-lg font-semibold text-neutral-800">Characters: </span>
+      <span class="text-neutral-950">{{ numberOfCharacter }}</span>
+    </a>
+    <a
+      routerLink="/episodes"
+      class="hover:shadow-lg hover:shadow-neutral-950 rounded p-4 transition-all"
+    >
+      <span class="text-lg font-semibold text-neutral-800">Episode: </span>
+      <span class="text-neutral-950">{{ numberOfEpisode }}</span>
+    </a>
+    <a
+      routerLink="/locations"
+      class="hover:shadow-lg hover:shadow-neutral-950 rounded p-4 transition-all"
+    >
+      <span class="text-lg font-semibold text-neutral-800">Location: </span>
+      <span class="text-neutral-950">{{ numberOfLocation }}</span>
+    </a>
+  </div>
+</div>
