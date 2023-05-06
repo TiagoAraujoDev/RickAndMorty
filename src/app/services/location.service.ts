@@ -16,6 +16,11 @@ export class LocationService {
     return this.httpClient.get<Response<Location>>(url);
   }
 
+  getLocation(id: number): Observable<Location> {
+    const url = `https://rickandmortyapi.com/api/location/${id}`;
+    return this.httpClient.get<Location>(url);
+  }
+
   getNextPage(url: string): Observable<Response<Location>> {
     return this.httpClient.get<Response<Location>>(url);
   }

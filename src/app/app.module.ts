@@ -18,6 +18,7 @@ import { FilterFormComponent } from './components/filter-form/filter-form.compon
 import { LocationCardComponent } from './components/location-card/location-card.component';
 import { EpisodeCardComponent } from './components/episode-card/episode-card.component';
 import { EpisodeDetailsComponent } from './components/pages/episode-details/episode-details.component';
+import { LocationDetailsComponent } from './components/pages/location-details/location-details.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { EpisodeDetailsComponent } from './components/pages/episode-details/epis
     LocationCardComponent,
     EpisodeCardComponent,
     EpisodeDetailsComponent,
+    LocationDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { LocationsComponent } from './components/pages/locations/locations.compo
 import { CharactersComponent } from './components/pages/characters/characters.component';
 import { EpisodesComponent } from './components/pages/episodes/episodes.component';
 import { EpisodeDetailsComponent } from './components/pages/episode-details/episode-details.component';
+import { LocationDetailsComponent } from './components/pages/location-details/location-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'episodes', component: EpisodesComponent },
   { path: 'locations', component: LocationsComponent },
   { path: 'episode/:id', component: EpisodeDetailsComponent },
+  { path: 'location/:id', component: LocationDetailsComponent },
 ];
 
 @NgModule({

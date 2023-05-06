@@ -1,0 +1,25 @@
+<div *ngIf="location && residents">
+  <h1 class="text-neutral-800 text-4xl font-bold mb-2">Location</h1>
+  <div>
+    <p class="inline text-xl text-neutral-800 font-semibold">Name:</p>
+    <p class="inline text-xl text-neutral-700">
+      {{ location.name }}
+    </p>
+  </div>
+  <div>
+    <p class="inline text-xl text-neutral-800 font-semibold">Type:</p>
+    <p class="inline text-xl text-neutral-700">
+      {{ location.type }}
+    </p>
+  </div>
+  <div>
+    <p class="inline text-xl text-neutral-800 font-semibold">Dimension:</p>
+    <p class="inline text-xl text-neutral-700">
+      {{ location.dimension }}
+    </p>
+  </div>
+  <h2 class="text-neutral-800 text-xl font-semibold">Characters:</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 mt-2">
+    <app-card *ngFor="let character of residents" [character]="character" />
+  </div>
+</div>

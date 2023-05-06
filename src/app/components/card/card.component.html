@@ -24,7 +24,7 @@
     <div class="my-2">
       <p class="text-neutral-400 mr-1">Location:</p>
       <a
-        routerLink=""
+        routerLink="{{ character.location.url.slice(31) }}"
         title="{{ character.location.name }}"
         class="hover:text-green-500 text-ellipsis overflow-hidden"
       >
@@ -32,7 +32,11 @@
       </a>
     </div>
     <div class="my-2">
-      <a routerLink="" class="hover:text-green-500">First appearance</a>
+      <a
+        routerLink="{{ character.episode[0].slice(31) }}"
+        class="hover:text-green-500"
+        >First appearance</a
+      >
     </div>
   </div>
 </div>
