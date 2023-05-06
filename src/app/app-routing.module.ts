@@ -5,12 +5,14 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { LocationsComponent } from './components/pages/locations/locations.component';
 import { CharactersComponent } from './components/pages/characters/characters.component';
 import { EpisodesComponent } from './components/pages/episodes/episodes.component';
+import { EpisodeDetailsComponent } from './components/pages/episode-details/episode-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'episodes', component: EpisodesComponent },
   { path: 'locations', component: LocationsComponent },
+  { path: 'episode/:id', component: EpisodeDetailsComponent },
 ];
 
 @NgModule({

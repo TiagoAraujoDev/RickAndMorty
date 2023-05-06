@@ -1,0 +1,20 @@
+<div *ngIf="episode && characters">
+  <span class="text-neutral-500 italic">{{ episode.episode }}</span>
+  <h1 class="text-neutral-800 text-4xl font-bold mb-2">Episode</h1>
+  <div>
+    <p class="inline text-xl text-neutral-800 font-semibold">Name:</p>
+    <p class="inline text-xl text-neutral-700">
+      {{ episode.name }}
+    </p>
+  </div>
+  <div>
+    <p class="inline text-xl text-neutral-800 font-semibold">Air date:</p>
+    <p class="inline text-xl text-neutral-700">
+      {{ episode.air_date }}
+    </p>
+  </div>
+  <h2 class="text-neutral-800 text-xl font-semibold">Characters:</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 mt-2">
+    <app-card *ngFor="let character of characters" [character]="character" />
+  </div>
+</div>

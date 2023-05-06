@@ -1,9 +1,11 @@
-<div
-  class="bg-neutral-500 p-4 rounded-lg hover:shadow-md hover:shadow-neutral-900 transition-all"
+<a
+  class="block bg-neutral-500 p-4 rounded-lg hover:shadow-md hover:shadow-neutral-900 transition-all"
+  routerLink="/episode/{{ episode.id }}"
 >
   <p class="text-neutral-300 font-semibold">{{ episode.episode }}</p>
   <h2 class="text-neutral-900 font-bold text-lg">{{ episode.name }}</h2>
   <p class="text-base">
-    Air date: <span class="text-neutral-200 italic">{{ episode.air_date }}</span>
+    Air date:
+    <span class="text-neutral-200 italic">{{ episode.air_date }}</span>
   </p>
-</div>
+</a>

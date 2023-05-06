@@ -10,7 +10,7 @@ import { FilterInfos } from '../filter-infos';
   providedIn: 'root',
 })
 export class CharacterService {
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getAllCharacter(filter?: FilterInfos): Observable<Response<Character>> {
     let url;
@@ -20,6 +20,11 @@ export class CharacterService {
       url = 'https://rickandmortyapi.com/api/character';
     }
     return this.httpClient.get<Response<Character>>(url);
+  }
+
+  getMultipleCharacters(ids: number[]): Observable<Character[]> {
+    const url = `https://rickandmortyapi.com/api/character/${ids}`;
+    return this.httpClient.get<Character[]>(url);
   }
 
   getNextPage(url: string): Observable<Response<Character>> {
